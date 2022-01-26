@@ -4,6 +4,8 @@
   --primary-white:#fff;
   --primary-orange: orange;
   --primary-dark:rgba(255,255,255,0);
+  --primary-red:#ef4035;
+  --primary-hover-red:#f33502;
 }
 
 body{
@@ -36,4 +38,84 @@ nav ul li{
 }
 .navbar-nav > li > a.active, .navbar-nav > li > a:focus {
   border-top:0.1875rem solid var(--primary-orange);
+}
+.navbar-nav > li >a:hover{
+  border-top:0.1875rem solid var(--primary-orange);
+}
+
+/*************HEADER ************/
+.header-wraper{
+  position: relative;
+  background: url(header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+
+}
+.main-info{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-info h1 {
+  color: var(--primary-orange);
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+@media (max-width:768px) {
+  .main-info h1{
+    font-size: 1.6rem !important;
+  }
+  
+}
+@media (max-width:420px) {
+  .main-info h1 {
+    font-size: .78rem !important;
+  }
+}
+/*********** MAIN OFFER BUTTON***************/
+.btn-main-offer{
+  border: 3px solid var(--primary-orange);
+  text-decoration: none;
+  color: var(--primary-white);
+  padding: 10px 15px 10px 15px;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+
+}
+.btn-main-offer:hover{
+  color: var(--primary-white);
+  background-color: var(--primary-hover-red);
+  transition: .2s ease;
+
+
+
+}
+.navbar-light .navbar-toggler{
+
+}
+@media (mix-width:768px) {
+  .navbar-light .navbar-toggler{
+    margin-right: 3rem;
+  }
+}
+@media (mix-width:420px) {
+  .navbar-light .navbar-toggler{
+    margin-right: 3rem;
+  }
+  .bg-dark{
+    display: flex !important;
+  }
 }
